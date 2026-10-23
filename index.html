@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anatomia | Human Body Anatomy</title>
+  <meta name="description" content="Explore human body anatomy: organ systems, organs, an interactive body map, quiz and facts.">
+  <link rel="stylesheet" href="src/css/base.css">
+  <link rel="stylesheet" href="src/css/layout.css">
+  <link rel="stylesheet" href="src/css/components.css">
+  <link rel="stylesheet" href="src/css/modal.css">
+  <link rel="stylesheet" href="src/css/quiz.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">Anatomia</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="#home" data-link>Home</a>
+        <a href="#systems" data-link>Systems</a>
+        <a href="#bodymap" data-link>Body Map</a>
+        <a href="#organs" data-link>Organs</a>
+        <a href="#facts" data-link>Facts</a>
+        <a href="#quiz" data-link>Quiz</a>
+      </nav>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero" data-section>
+      <div class="container hero-inner">
+        <h1>Discover the Human Body</h1>
+        <p>A guided tour through the organ systems, organs and structures that keep you alive, moving and thinking.</p>
+        <div class="hero-actions">
+          <a href="#bodymap" class="btn btn-primary">Open Body Map</a>
+          <a href="#quiz" class="btn btn-ghost">Take the Quiz</a>
+        </div>
+        <ul class="stats" id="stats"></ul>
+      </div>
+    </section>
+
+    <section id="systems" class="section" data-section>
+      <div class="container">
+        <h2 class="section-title">Organ Systems</h2>
+        <p class="section-sub">Select a system to filter the organ library below.</p>
+        <div class="grid systems-grid reveal" id="systemsGrid"></div>
+      </div>
+    </section>
+
+    <section id="bodymap" class="section alt" data-section>
+      <div class="container map-layout">
+        <div class="map-wrap reveal">
+          <svg id="bodySvg" viewBox="0 0 200 420" role="img" aria-label="Interactive human body map">
+            <circle class="body-shape" cx="100" cy="42" r="30"/>
+            <rect class="body-shape" x="90" y="68" width="20" height="18" rx="6"/>
+            <path class="body-shape" d="M55 90 Q100 78 145 90 L155 230 Q100 245 45 230 Z"/>
+            <rect class="body-shape" x="22" y="92" width="26" height="140" rx="13"/>
+            <rect class="body-shape" x="152" y="92" width="26" height="140" rx="13"/>
+            <rect class="body-shape" x="58" y="232" width="38" height="170" rx="16"/>
+            <rect class="body-shape" x="104" y="232" width="38" height="170" rx="16"/>
+            <circle class="hotspot" data-organ="brain" cx="100" cy="32" r="9"/>
+            <circle class="hotspot" data-organ="lungs" cx="100" cy="118" r="11"/>
+            <circle class="hotspot" data-organ="heart" cx="110" cy="136" r="8"/>
+            <circle class="hotspot" data-organ="liver" cx="82" cy="160" r="8"/>
+            <circle class="hotspot" data-organ="stomach" cx="116" cy="164" r="8"/>
+            <circle class="hotspot" data-organ="kidneys" cx="100" cy="182" r="8"/>
+            <circle class="hotspot" data-organ="intestines" cx="100" cy="206" r="11"/>
+          </svg>
+        </div>
+        <div class="map-info reveal">
+          <h2 class="section-title">Interactive Body Map</h2>
+          <p class="section-sub">Click a glowing point to learn about that organ.</p>
+          <div class="map-card" id="mapCard">
+            <h3>Choose an organ</h3>
+            <p>Details will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="organs" class="section" data-section>
+      <div class="container">
+        <h2 class="section-title">Organ Library</h2>
+        <div class="toolbar">
+          <input type="search" id="organSearch" placeholder="Search organs..." aria-label="Search organs">
+          <select id="organFilter" aria-label="Filter by system"></select>
+        </div>
+        <p class="result-count" id="resultCount"></p>
+        <div class="grid organs-grid" id="organsGrid"></div>
+      </div>
+    </section>
+
+    <section id="facts" class="section alt" data-section>
+      <div class="container facts-box reveal">
+        <h2 class="section-title">Did You Know?</h2>
+        <blockquote id="factText" class="fact-text"></blockquote>
+        <button class="btn btn-primary" id="factBtn">Another fact</button>
+      </div>
+    </section>
+
+    <section id="quiz" class="section" data-section>
+      <div class="container">
+        <h2 class="section-title">Anatomy Quiz</h2>
+        <div class="quiz-card reveal" id="quizCard"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Anatomia is for education only and is not medical advice.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>

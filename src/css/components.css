@@ -1,0 +1,112 @@
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary { background: var(--primary); color: #fff; }
+
+.btn-primary:hover { background: var(--primary-dark); }
+
+.btn-ghost { border-color: var(--primary); color: var(--primary); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover { transform: translateY(-4px); border-color: var(--primary); }
+
+.system-card { cursor: pointer; text-align: left; width: 100%; }
+
+.system-card.active { border-color: var(--primary); background: rgba(225, 29, 72, 0.08); }
+
+.system-card .icon { font-size: 2rem; display: block; margin-bottom: 0.4rem; }
+
+.system-card h3 { font-size: 1.1rem; }
+
+.system-card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+.organ-card { cursor: pointer; }
+
+.organ-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+
+.organ-card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.toolbar { display: flex; gap: 0.8rem; flex-wrap: wrap; margin: 1.2rem 0 0.6rem; }
+
+.toolbar input, .toolbar select {
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.toolbar input { flex: 1; min-width: 200px; }
+
+.result-count { color: var(--muted); font-size: 0.9rem; }
+
+.empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 2rem 0; }
+
+.body-shape { fill: var(--surface); stroke: var(--muted); stroke-width: 1.5; }
+
+.hotspot {
+  fill: var(--primary);
+  fill-opacity: 0.85;
+  stroke: #fff;
+  stroke-width: 1.5;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hotspot:hover, .hotspot.active { fill: var(--accent); }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+#bodySvg { width: min(320px, 100%); height: auto; }
+
+.map-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  min-height: 180px;
+}
+
+.map-card p { color: var(--muted); }
+
+.facts-box { text-align: center; max-width: 720px; }
+
+.fact-text {
+  margin: 1.2rem 0 1.5rem;
+  font-size: 1.25rem;
+  font-style: italic;
+  min-height: 4.5rem;
+}
