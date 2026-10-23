@@ -1,32 +1,33 @@
 :root {
-  --bg: #f4eee2;
-  --bg-alt: #ebe3d3;
-  --surface: #fbf7ee;
-  --text: #1f1b16;
-  --muted: #6b6257;
-  --primary: #c1272d;
-  --primary-dark: #8f1b20;
-  --accent: #2b4a5c;
-  --gold: #b08a3e;
-  --border: #d6cbb6;
-  --shadow: 0 2px 0 rgba(31, 27, 22, 0.08);
-  --radius: 2px;
+  --bg: #f8f7ff;
+  --bg-alt: #efeafe;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --primary: #7c3aed;
+  --primary-dark: #6d28d9;
+  --primary-rgb: 124, 58, 237;
+  --accent: #2563eb;
+  --accent-rgb: 37, 99, 235;
+  --border: #ddd6fe;
+  --shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  --radius: 14px;
   --header-h: 64px;
-  --font: "Shippori Mincho", "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", Georgia, serif;
 }
 
 [data-theme="dark"] {
-  --bg: #15120f;
-  --bg-alt: #1c1813;
-  --surface: #221d17;
-  --text: #f1e9d8;
-  --muted: #a39887;
-  --primary: #e0474c;
-  --primary-dark: #b8353a;
-  --accent: #8fb3c6;
-  --gold: #d1a954;
-  --border: #3a322a;
-  --shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+  --bg: #0f0a24;
+  --bg-alt: #160f33;
+  --surface: #1e1745;
+  --text: #f1f5f9;
+  --muted: #a5b4fc;
+  --border: #3b2f7a;
+  --primary: #a78bfa;
+  --primary-dark: #8b5cf6;
+  --primary-rgb: 167, 139, 250;
+  --accent: #60a5fa;
+  --accent-rgb: 96, 165, 250;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -35,15 +36,14 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 
 body {
   margin: 0;
-  font-family: var(--font);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.8;
-  letter-spacing: 0.02em;
+  line-height: 1.6;
   transition: background 0.3s, color 0.3s;
 }
 
-h1, h2, h3 { line-height: 1.3; margin: 0 0 0.5em; font-weight: 800; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5em; }
 
 a { color: inherit; text-decoration: none; }
 
@@ -51,6 +51,6 @@ button, input, select { font: inherit; color: inherit; }
 
 img, svg { max-width: 100%; }
 
-:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
 [hidden] { display: none !important; }
