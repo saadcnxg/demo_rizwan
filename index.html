@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anatomia | Human Body Anatomy</title>
+  <title>Anatomia 人体 | Human Body Anatomy</title>
   <meta name="description" content="Explore human body anatomy: organ systems, organs, an interactive body map, quiz and facts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap">
   <link rel="stylesheet" href="src/css/base.css">
   <link rel="stylesheet" href="src/css/layout.css">
   <link rel="stylesheet" href="src/css/components.css">
@@ -14,7 +17,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="brand">Anatomia</a>
+      <a href="#home" class="brand"><span class="hanko">人体</span>Anatomia</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <nav class="site-nav" id="siteNav">
         <a href="#home" data-link>Home</a>
@@ -24,13 +27,15 @@
         <a href="#facts" data-link>Facts</a>
         <a href="#quiz" data-link>Quiz</a>
       </nav>
-      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">月</button>
     </div>
   </header>
 
   <main>
     <section id="home" class="hero" data-section>
       <div class="container hero-inner">
+        <p class="hero-vertical" aria-hidden="true">人体解剖図</p>
+        <p class="jp-eyebrow">人体の世界へ</p>
         <h1>Discover the Human Body</h1>
         <p>A guided tour through the organ systems, organs and structures that keep you alive, moving and thinking.</p>
         <div class="hero-actions">
@@ -43,7 +48,7 @@
 
     <section id="systems" class="section" data-section>
       <div class="container">
-        <h2 class="section-title">Organ Systems</h2>
+        <h2 class="section-title"><span class="jp">系統</span>Organ Systems</h2>
         <p class="section-sub">Select a system to filter the organ library below.</p>
         <div class="grid systems-grid reveal" id="systemsGrid"></div>
       </div>
@@ -70,8 +75,8 @@
           </svg>
         </div>
         <div class="map-info reveal">
-          <h2 class="section-title">Interactive Body Map</h2>
-          <p class="section-sub">Click a glowing point to learn about that organ.</p>
+          <h2 class="section-title"><span class="jp">身体地図</span>Interactive Body Map</h2>
+          <p class="section-sub">Click a red seal to learn about that organ.</p>
           <div class="map-card" id="mapCard">
             <h3>Choose an organ</h3>
             <p>Details will appear here.</p>
@@ -82,7 +87,7 @@
 
     <section id="organs" class="section" data-section>
       <div class="container">
-        <h2 class="section-title">Organ Library</h2>
+        <h2 class="section-title"><span class="jp">臓器図鑑</span>Organ Library</h2>
         <div class="toolbar">
           <input type="search" id="organSearch" placeholder="Search organs..." aria-label="Search organs">
           <select id="organFilter" aria-label="Filter by system"></select>
@@ -94,7 +99,7 @@
 
     <section id="facts" class="section alt" data-section>
       <div class="container facts-box reveal">
-        <h2 class="section-title">Did You Know?</h2>
+        <h2 class="section-title"><span class="jp">豆知識</span>Did You Know?</h2>
         <blockquote id="factText" class="fact-text"></blockquote>
         <button class="btn btn-primary" id="factBtn">Another fact</button>
       </div>
@@ -102,7 +107,7 @@
 
     <section id="quiz" class="section" data-section>
       <div class="container">
-        <h2 class="section-title">Anatomy Quiz</h2>
+        <h2 class="section-title"><span class="jp">試験</span>Anatomy Quiz</h2>
         <div class="quiz-card reveal" id="quizCard"></div>
       </div>
     </section>
@@ -110,6 +115,7 @@
 
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-jp">人体 · 学びの旅</p>
       <p>Anatomia is for education only and is not medical advice.</p>
     </div>
   </footer>

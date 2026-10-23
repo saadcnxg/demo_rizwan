@@ -5,7 +5,7 @@ const KEY = "anatomia-theme";
 function apply(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   const btn = qs("#themeBtn");
-  if (btn) btn.textContent = theme === "dark" ? "☀" : "🌙";
+  if (btn) btn.textContent = theme === "dark" ? "日" : "月";
 }
 
 function stored() {
